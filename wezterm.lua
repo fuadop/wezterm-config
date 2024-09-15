@@ -2,12 +2,14 @@ local config = {}
 local wezterm = require('wezterm')
 
 config.font = wezterm.font_with_fallback{
+	'GohuFont 11 Nerd Font Mono',
 	'Hasklug Nerd Font Mono',
 	'JetBrains Mono',
 	'Ubuntu',
 }
 
-config.font_size = 10
+config.font_size = 11 -- for Gohu
+-- config.font_size = 10 -- for Hasklig
 
 config.default_prog = {
 	'/opt/homebrew/bin/tmux',
