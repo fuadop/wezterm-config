@@ -2,14 +2,14 @@ local config = {}
 local wezterm = require('wezterm')
 
 config.font = wezterm.font_with_fallback{
-	'GohuFont 11 Nerd Font Mono',
+	-- 'GohuFont 11 Nerd Font Mono',
 	'Hasklug Nerd Font Mono',
 	'JetBrains Mono',
 	'Ubuntu',
 }
 
-config.font_size = 11 -- for Gohu
--- config.font_size = 10 -- for Hasklig
+-- config.font_size = 11 -- for Gohu
+config.font_size = 10 -- for Hasklig
 
 config.default_prog = {
 	'/opt/homebrew/bin/tmux',
@@ -31,8 +31,6 @@ config.window_padding = {
 	right = 1,
 	bottom = 1,
 }
-
-config.window_decorations = 'RESIZE|MACOS_FORCE_DISABLE_SHADOW'
 
 config.window_close_confirmation = 'NeverPrompt'
 
