@@ -3,6 +3,7 @@ local wezterm = require('wezterm')
 
 config.font = wezterm.font_with_fallback{
 	-- 'GohuFont 11 Nerd Font Mono',
+	'CodeNewRoman Nerd Font Mono',
 	'Hasklug Nerd Font Mono',
 	'JetBrains Mono',
 	'Ubuntu',
