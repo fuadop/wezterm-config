@@ -35,6 +35,7 @@ config.window_padding = {
 
 config.window_close_confirmation = 'NeverPrompt'
 
+config.native_macos_fullscreen_mode = true
 config.disable_default_key_bindings = true
 config.keys = {
 	{
@@ -68,6 +69,28 @@ config.keys = {
 		key = 'n',
 		mods = 'CTRL|SHIFT',
 		action = wezterm.action.SpawnWindow,
+	},
+
+	{
+		key = 'k',
+		mods = 'SUPER',
+		-- zsh clear screen
+		-- && tmux clear-history (scrollback buffer)
+		action = wezterm.action.Multiple {
+			-- zsh seq
+			-- bindkey "^L" clear-screen
+			wezterm.action.SendKey {
+				key = 'l',
+				mods = 'CTRL',
+			},
+
+			-- tmux seq
+			-- https://github.com/fuadop/zsh-config/commit/d07b24955acfa99be5a50f766e493b0ccc27c195
+			wezterm.action.SendKey {
+				key = 'l',
+				mods = 'META|CTRL'
+			},
+		},
 	},
 
 	{
