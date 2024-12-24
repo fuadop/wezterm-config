@@ -9,8 +9,7 @@ config.font = wezterm.font_with_fallback{
 	'Ubuntu',
 }
 
--- config.font_size = 11 -- for Gohu
-config.font_size = 10 -- for Hasklig
+config.font_size = 10
 
 config.default_prog = {
 	'/opt/homebrew/bin/tmux',
